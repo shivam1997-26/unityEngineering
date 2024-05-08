@@ -1,5 +1,6 @@
 import React from 'react';
 import { useSelector } from 'react-redux';
+import { Link } from 'react-router-dom';
 import "swiper/css";
 import 'swiper/css/effect-fade';
 import { Autoplay, EffectFade } from 'swiper/modules';
@@ -26,12 +27,12 @@ const Main = () => {
                                     Where You Can Get All Extrusion Solution Under One Roof
                                 </p>
                                 <p>
-                                    <a href="" className="btn btn-secondary me-2">
+                                    {/* <a href="" className="btn btn-secondary me-2">
                                         Shop Now
-                                    </a>
-                                    <a href="#" className="btn btn-white-outline">
+                                    </a> */}
+                                    <Link to='/contact-us' className="btn btn-secondary me-2">
                                         Explore
-                                    </a>
+                                    </Link>
                                 </p>
                             </div>
                         </div>

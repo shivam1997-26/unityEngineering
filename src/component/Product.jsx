@@ -1,4 +1,5 @@
 import React, { useEffect, useState } from 'react'
+import { Link } from 'react-router-dom'
 import { apiUrl } from '../config/apiUrls'
 import { getRequest } from '../config/httpRequest'
 import Hero from './Hero'
@@ -27,22 +28,27 @@ const Product = () => {
                     <div className="row">
                         {
                             productData?.map((item) => (
+
                                 <div className="col-12 col-md-6 col-lg-4 mb-5 mt-5 mb-lg-0">
-                                    <div className="product-item-sm d-flex">
-                                        <div className="thumbnail">
-                                            <img src={item.image} alt="Image" className="img-fluid" />
+                                 
+                                        <div className="product-item-sm d-flex">
+                                            <div className="thumbnail">
+                                                <img src={item.image} alt="Image" className="img-fluid" />
+                                            </div>
+                                            <div className="pt-3">
+                                                <h3>{item.productName}</h3>
+                                                <p>
+                                                    {item.shortDescription}
+                                                </p>
+                                                <p>
+                                                  
+                                                    <Link to={`/productDetails/${item.id}`} className="product-item">Read More</Link>
+                                                </p>
+                                            </div>
                                         </div>
-                                        <div className="pt-3">
-                                            <h3>{item.productName}</h3>
-                                            <p>
-                                              {item.shortDescription}
-                                            </p>
-                                            <p>
-                                                <a href="#">Read More</a>
-                                            </p>
-                                        </div>
-                                    </div>
+                                  
                                 </div>
+
                             ))
                         }
 

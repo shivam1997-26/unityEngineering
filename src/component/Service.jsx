@@ -25,9 +25,13 @@ const Service = () => {
             <div className="untree_co-section product-section before-footer-section">
                 <div className="container">
                     <div className="row">
+                        <div className='col-12 mb-5'>
+                            <h2 className="section-title text-center">Our Product</h2>
+                        </div>
+
                         {
-                            productData?.map((item,id) => (
-                                <div className="col-12 col-md-4 col-lg-3 mb-5" id={id*2}>
+                            productData?.map((item, id) => (
+                                <div className="col-12 col-md-4 col-lg-3 mb-5" id={id * 2}>
                                     <Link to={`/productDetails/${item.id}`} className="product-item">
                                         <img
                                             src={item.image}
